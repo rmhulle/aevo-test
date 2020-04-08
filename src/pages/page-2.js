@@ -8,15 +8,15 @@ import analytics from "../analytics"
 function onclickTrack() {
   analytics.track("Add to Cart", {
     category: "Shopping",
-    action: "Add Cart"
+    action: "Add Cart",
   })
 }
 
 function onclickGoal() {
   analytics.track("Purchased", {
     category: "Shopping",
-    action: "Purchase"
-    value: 567
+    action: "Purchase",
+    value: 567,
   })
 }
 
