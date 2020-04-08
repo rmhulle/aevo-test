@@ -6,15 +6,26 @@ import SEO from "../components/seo"
 import analytics from "../analytics"
 
 function onclickTrack() {
-  analytics.track("Click Link", {
-    category: "Link",
+  analytics.track("Add to Cart", {
+    category: "Shopping",
+    action: "Add Cart",
+  })
+}
+
+function onclickGoal() {
+  analytics.track("Purchased", {
+    category: "Shopping",
+    action: "Purchase",
+    value: 567,
   })
 }
 
 function onclickIdentify() {
   analytics.identify("XPTO-001", {
-    email: "rmhulle@gmail.com",
-    name: "Rodrigo Hulle",
+    aq_source: "Referral",
+    aq_medium: "Influencer",
+    aq_campaing: "teste",
+    is_subscriber: true,
   })
 }
 
@@ -28,6 +39,9 @@ const SecondPage = () => (
     <h1>Página do Formulários</h1>
     <div>
       <button onClick={onclickTrack}>Track</button>
+    </div>
+    <div>
+      <button onClick={onclickGoal}>Goal</button>
     </div>
     <div>
       {" "}
