@@ -2,8 +2,6 @@
 import Analytics from "analytics"
 import googleTagManager from "@tegrus/analytics-plugin-google-tag-manager"
 
-//GTM-WBKBK2F
-
 const analytics = Analytics({
   app: "AevoTeste",
   debug: true,
