@@ -1,12 +1,19 @@
 /* analytics.js */
 import Analytics from "analytics"
+import googleTagManager from "@tegrus/analytics-plugin-google-tag-manager"
 
-// TODO Instalar o noScript do TagManager.
+//GTM-WBKBK2F
 
 const analytics = Analytics({
   app: "AevoTeste",
   debug: true,
-  plugins: [],
+  plugins: [
+    googleTagManager({
+      containerId: "GTM-WBKBK2F",
+      assumesPageview: true,
+      debug: false,
+    }),
+  ],
 })
 
 analytics.on("page", ({ payload }) => {
